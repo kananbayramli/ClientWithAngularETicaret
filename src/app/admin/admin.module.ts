@@ -10,7 +10,7 @@ import { ComponentsModule } from './layout/components/components.module';
   imports: [
     CommonModule,
     LayoutModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   exports:[
     LayoutModule
