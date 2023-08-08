@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
 import { Create_Product } from 'src/app/contracts/create_product';
@@ -20,30 +20,16 @@ export class CreateComponent  extends BaseComponent implements OnInit{
   ngOnInit(): void {  
   }
 
+
+  @Output() createdProduct: EventEmitter<Create_Product> = new EventEmitter();
+
+
   create(name: HTMLInputElement, stock: HTMLInputElement, price: HTMLInputElement){
     this.showSpinner(SpinnerType.BallSpinClockwiseFadeRotating);
     const  create_product: Create_Product = new Create_Product();
     create_product.name = name.value;
     create_product.stock = parseInt(stock.value);
     create_product.price = parseFloat(price.value);
-
-    if(!name.value){
-      this.alertify.message("Please enter product name",{
-        dismissOthers: true,
-        messageType: MessageType.Error,
-        position: Position.TopRight
-      });
-      return;
-    }
-
-    if(parseInt(stock.value) < 0){
-      this.alertify.message("Product added successfuly",{
-        dismissOthers: true,
-        messageType: MessageType.Error,
-        position: Position.TopRight
-      });
-      return;
-    }
 
 
 
@@ -54,6 +40,7 @@ export class CreateComponent  extends BaseComponent implements OnInit{
       messageType: MessageType.Success,
       position: Position.TopCenter
     });
+    this.createdProduct.emit(create_product);
 
   },errorMessage => {
     this.alertify.message(errorMessage,{
