@@ -32,7 +32,7 @@ export class ListComponent extends BaseComponent implements OnInit, AfterViewIni
 
 
 async getProducts(){
-  this.showSpinner(SpinnerType.BallScaleMultiple)
+  this.showSpinner(SpinnerType.BallScaleMultiple) //
   const allProducts: {totalCount: number, products: List_Product[]} = await this.productService.read(this.paginator ?  this.paginator.pageIndex : 0, this.paginator ? 
      this.paginator.pageSize : 5,
      () => this.hideSpinner(SpinnerType.BallScaleMultiple), errorMessage =>
