@@ -3,7 +3,7 @@ import { EventEmitter } from '@angular/core';
 import { Directive, ElementRef, HostListener, Input, Output, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { BaseComponent, SpinnerType } from '../../base/base.component';
+import { SpinnerType } from '../../base/base.component';
 import { DeleteDialogComponent, DeleteState } from '../../dialogs/delete-dialog/delete-dialog.component';
 import { AlertifyService, MessageType, Position } from '../../services/admin/alertify.service';
 import { DialogService } from '../../services/common/dialog.service';
