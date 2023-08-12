@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Dikkat!</h1>
+<div mat-dialog-content>
+  <p>Are you sure download this files ? </p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">No</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>YES</button>
+</div>
