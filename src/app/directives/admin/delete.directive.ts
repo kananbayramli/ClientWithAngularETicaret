@@ -3,11 +3,12 @@ import { EventEmitter } from '@angular/core';
 import { Directive, ElementRef, HostListener, Input, Output, Renderer2 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { SpinnerType } from '../../base/base.component';
+import { BaseComponent, SpinnerType } from '../../base/base.component';
 import { DeleteDialogComponent, DeleteState } from '../../dialogs/delete-dialog/delete-dialog.component';
 import { AlertifyService, MessageType, Position } from '../../services/admin/alertify.service';
 import { DialogService } from '../../services/common/dialog.service';
 import { HttpClientService } from '../../services/common/http-client.service';
+import { ProductService } from '../../services/common/models/product.service';
 
 declare var $: any;
 
@@ -54,7 +55,7 @@ export class DeleteDirective {
             height: "toogle"
           }, 700, () => {
             this.callback.emit();
-            this.alertifyService.message("The product deleted successfuly", {
+            this.alertifyService.message(`${this.controller == 'roles' ? 'Rol' : 'Ürün'} başarıyla silinmiştir.`, {
               dismissOthers: true,
               messageType: MessageType.Success,
               position: Position.TopRight
@@ -62,7 +63,7 @@ export class DeleteDirective {
           });
         }, (errorResponse: HttpErrorResponse) => {
           this.spinner.hide(SpinnerType.BallAtom);
-          this.alertifyService.message("We have some problems with deleting this product. Check your connection ", {
+          this.alertifyService.message("Ürün silinirken beklenmeyen bir hatayla karşılaşılmıştır.", {
             dismissOthers: true,
             messageType: MessageType.Error,
             position: Position.TopRight
@@ -71,4 +72,17 @@ export class DeleteDirective {
       }
     });
   }
+
+  //openDialog(afterClosed: any): void {
+  //  const dialogRef = this.dialog.open(DeleteDialogComponent, {
+  //    width: '250px',
+  //    data: DeleteState.Yes,
+  //  });
+
+  //  dialogRef.afterClosed().subscribe(result => {
+  //    if (result == DeleteState.Yes)
+  //      afterClosed();
+  //  });
+  //}
+
 }
