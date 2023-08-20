@@ -24,43 +24,43 @@ export class HttpErrorHandlerInterceptorService implements HttpInterceptor {
             if (!state) {
               const url = this.router.url;
               if (url == "/products")
-                this.toastrService.message("Sepete ürün eklemek için oturum açmanız gerekiyor.", "Oturum açınız!", {
+                this.toastrService.message("For adding to basket product you need sign in", "Sign in!", {
                   messageType: ToastrMessageType.Warning,
                   position: ToastrPosition.TopRight
                 });
               else
-                this.toastrService.message("Bu işlemi yapmaya yetkiniz bulunmamaktadır!", "Yetkisiz işlem!", {
+                this.toastrService.message("You are not Authorized!", "Unauthorized action!", {
                   messageType: ToastrMessageType.Warning,
                   position: ToastrPosition.BottomFullWidth
                 });
             }
           }).then(data => {
-            this.toastrService.message("Bu işlemi yapmaya yetkiniz bulunmamaktadır!", "Yetkisiz işlem!", {
+            this.toastrService.message("You are not Authorized!", "Unauthorized action!", {
               messageType: ToastrMessageType.Warning,
               position: ToastrPosition.BottomFullWidth
             });
           });
           break;
         case HttpStatusCode.InternalServerError:
-          this.toastrService.message("Sunucuya erişilmiyor!", "Sunucu hatası!", {
+          this.toastrService.message("Cannot access the server!", "Server error!", {
             messageType: ToastrMessageType.Warning,
             position: ToastrPosition.BottomFullWidth
           });
           break;
         case HttpStatusCode.BadRequest:
-          this.toastrService.message("Geçersiz istek yapıldı!", "Geçersiz istek!", {
+          this.toastrService.message("Invalid request!", "Invalid request!", {
             messageType: ToastrMessageType.Warning,
             position: ToastrPosition.BottomFullWidth
           });
           break;
         case HttpStatusCode.NotFound:
-          this.toastrService.message("Sayfa bulunamadı!", "Sayfa bulunamadı!", {
+          this.toastrService.message("Page not found!", "Page not found!", {
             messageType: ToastrMessageType.Warning,
             position: ToastrPosition.BottomFullWidth
           });
           break;
         default:
-          this.toastrService.message("Beklenmeyen bir hata meydana gelmiştir!", "Hata!", {
+          this.toastrService.message("Looks like we have some problems :(", "Error :(", {
             messageType: ToastrMessageType.Warning,
             position: ToastrPosition.BottomFullWidth
           });

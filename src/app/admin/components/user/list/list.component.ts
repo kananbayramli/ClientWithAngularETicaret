@@ -57,7 +57,7 @@ export class ListComponent extends BaseComponent implements OnInit {
         width: "750px"
       },
       afterClosed: () => {
-        this.alertifyService.message("Roller başarıyla atanmıştır!", {
+        this.alertifyService.message("The Role added successfuly!", {
           messageType: MessageType.Success,
           position: Position.TopRight
         })

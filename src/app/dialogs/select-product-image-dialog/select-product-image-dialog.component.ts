@@ -32,7 +32,7 @@ export class SelectProductImageDialogComponent extends BaseDialog<SelectProductI
     accept: ".png, .jpg, .jpeg, .gif",
     action: "upload",
     controller: "products",
-    explanation: "Ürün resimini seçin veya buraya sürükleyin...",
+    explanation: "Select the product image",
     isAdminPage: true,
     queryString: `id=${this.data}`
   };

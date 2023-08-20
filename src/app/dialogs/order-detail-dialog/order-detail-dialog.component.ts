@@ -50,7 +50,7 @@ export class OrderDetailDialogComponent extends BaseDialog<OrderDetailDialogComp
         this.spinner.show(SpinnerType.BallAtom)
         await this.orderService.completeOrder(this.data as string);
         this.spinner.hide(SpinnerType.BallAtom)
-        this.toastrService.message("Sipariş başarıyla tamamlanmıştır! Müşteriye bilgi verilmiştir.", "Sipariş Tamamlandı!", {
+        this.toastrService.message("Order ended successfuly.Customer Notified ", "Order completed!", {
           messageType: ToastrMessageType.Success,
           position: ToastrPosition.TopRight
         });

@@ -19,7 +19,7 @@ export class PasswordResetComponent extends BaseComponent {
     this.showSpinner(SpinnerType.BallAtom)
     this.userAuthService.passwordReset(email, () => {
       this.hideSpinner(SpinnerType.BallAtom)
-      this.alertifyService.message("Mail başarıyla gönderilmiştir.", {
+      this.alertifyService.message("Mail sent succesfuly", {
         messageType: MessageType.Notify,
         position: Position.TopRight
       });

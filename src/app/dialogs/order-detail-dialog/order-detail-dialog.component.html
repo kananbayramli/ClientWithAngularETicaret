@@ -1,12 +1,10 @@
-<h2 mat-dialog-title>Sipariş Detayı</h2>
+<h2 mat-dialog-title>Order Detail</h2>
 <mat-dialog-content class="mat-typography">
 
 
 
-
-
   <mat-toolbar>
-    <span>Sipariş No : {{singleOrder.orderCode}}</span>
+    <span>Order No : {{singleOrder.orderCode}}</span>
   </mat-toolbar>
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 order-detail-table">
@@ -46,7 +44,7 @@
   <table style="width:100%;">
     <thead>
       <tr>
-        <th colspan="4" style="text-align:right;">Toplam Fiyat</th>
+        <th colspan="4" style="text-align:right;">Total Price</th>
       </tr>
     </thead>
     <tbody>
@@ -72,6 +70,6 @@
 
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Kapat</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="completeOrder()" *ngIf="!singleOrder.completed">Siparişi Tamamlama</button>
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial (click)="completeOrder()" *ngIf="!singleOrder.completed">Order Complete</button>
 </mat-dialog-actions>

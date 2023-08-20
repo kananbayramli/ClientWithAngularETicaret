@@ -24,7 +24,7 @@ export class UserAuthService {
       localStorage.setItem("accessToken", tokenResponse.token.accessToken);
       localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
 
-      this.toastrService.message("Kullanıcı girişi başarıyla sağlanmıştır.", "Giriş Başarılı", {
+      this.toastrService.message("You log in succesfuly :)", "Log in Succesfuly", {
         messageType: ToastrMessageType.Success,
         position: ToastrPosition.TopRight
       })
@@ -65,7 +65,7 @@ export class UserAuthService {
       localStorage.setItem("accessToken", tokenResponse.token.accessToken);
       localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
 
-      this.toastrService.message("Google üzerinden giriş başarıyla sağlanmıştır.", "Giriş Başarılı", {
+      this.toastrService.message("You log in with Google successfuly", "Successfuly", {
         messageType: ToastrMessageType.Success,
         position: ToastrPosition.TopRight
       });
@@ -86,7 +86,7 @@ export class UserAuthService {
       localStorage.setItem("accessToken", tokenResponse.token.accessToken);
       localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
 
-      this.toastrService.message("Facebook üzerinden giriş başarıyla sağlanmıştır.", "Giriş Başarılı", {
+      this.toastrService.message("You log in with Google successfuly", "Succesfuly", {
         messageType: ToastrMessageType.Success,
         position: ToastrPosition.TopRight
       })

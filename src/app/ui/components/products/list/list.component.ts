@@ -88,7 +88,7 @@ export class ListComponent extends BaseComponent implements OnInit {
     _basketItem.quantity = 1;
     await this.basketService.add(_basketItem);
     this.hideSpinner(SpinnerType.BallAtom);
-    this.customToastrService.message("Ürün sepete eklenmiştir.", "Sepete Eklendi", {
+    this.customToastrService.message("The product added to the Basket", "Added to the Basket", {
       messageType: ToastrMessageType.Success,
       position: ToastrPosition.TopRight
     });
