@@ -37,7 +37,7 @@ export class UpdatePasswordComponent extends BaseComponent implements OnInit {
   updatePassword(password: string, passwordConfirm: string) {
     this.showSpinner(SpinnerType.BallAtom);
     if (password != passwordConfirm) {
-      this.alertifyService.message("Şifreleri doğrulayınız!", {
+      this.alertifyService.message("Confirm the password!", {
         messageType: MessageType.Error,
         position: Position.TopRight
       });
@@ -51,7 +51,7 @@ export class UpdatePasswordComponent extends BaseComponent implements OnInit {
         const resetToken: string = params["resetToken"];
         await this.userService.updatePassword(userId, resetToken, password, passwordConfirm,
           () => {
-            this.alertifyService.message("Şifre başarıyla güncellenmiştir.", {
+            this.alertifyService.message("Password changed successfuly", {
               messageType: MessageType.Success,
               position: Position.TopRight
             })

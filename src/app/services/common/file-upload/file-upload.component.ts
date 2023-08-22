@@ -48,7 +48,7 @@ export class FileUploadComponent {
           headers: new HttpHeaders({ "responseType": "blob" })
         }, fileData).subscribe(data => {
 
-          const message: string = "Dosyalar başarıyla yüklenmiştir.";
+          const message: string = "Files downloaded succesfuly.";
 
           this.spinner.hide(SpinnerType.BallAtom);
           if (this.options.isAdminPage) {
@@ -59,7 +59,7 @@ export class FileUploadComponent {
                 position: Position.TopRight
               })
           } else {
-            this.customToastrService.message(message, "Başarılı.", {
+            this.customToastrService.message(message, "Successfuly.", {
               messageType: ToastrMessageType.Success,
               position: ToastrPosition.TopRight
             })
@@ -68,7 +68,7 @@ export class FileUploadComponent {
 
         }, (errorResponse: HttpErrorResponse) => {
 
-          const message: string = "Dosyalar yüklenirken beklenmeyen bir hatayla karşılaşılmıştır.";
+          const message: string = "We have some problems :( Check server connection";
 
           this.spinner.hide(SpinnerType.BallAtom)
           if (this.options.isAdminPage) {
@@ -79,7 +79,7 @@ export class FileUploadComponent {
                 position: Position.TopRight
               })
           } else {
-            this.customToastrService.message(message, "Başarsız.", {
+            this.customToastrService.message(message, "Error.", {
               messageType: ToastrMessageType.Error,
               position: ToastrPosition.TopRight
             })

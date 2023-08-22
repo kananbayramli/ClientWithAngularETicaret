@@ -1,0 +1,51 @@
+.home_bigdiv_banner{
+    
+    padding: 0px 40px;
+    background-image: url("../../../../assets/biner.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 370px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.home_div_banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home_div_banner h1{
+    font-size: 40px;
+    color: #2e8fc5;
+}
+.home_div_banner p{
+    color: white;
+    font-size: 15px;
+}
+.home_div_banner a{
+    padding: 10px 20px;
+    background-color: #eda415;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    border: 1px solid #eda415;
+    transition: 0.5s ease all;
+}
+.home_div_banner a:hover{
+    background-color: transparent;
+    color: #eda415;
+}
+.home_brend{
+    background-image: url("../../../../assets/brends.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    margin-top: 20px;
+
+}

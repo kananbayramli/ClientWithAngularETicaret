@@ -1,0 +1,15 @@
+.login_bigdiv{
+    width: 99.9%;
+    height:calc(100vh - 75px);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(199, 241, 227, 0.202);
+}
+.login_qogal{
+    display: flex;
+    gap: 10px;
+    padding: 10px 0px;
+}

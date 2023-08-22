@@ -26,7 +26,7 @@ export class AppComponent {
     localStorage.removeItem("accessToken");
     this.authService.identityCheck();
     this.router.navigate([""]);
-    this.toastrService.message("!", "Signed out", {
+    this.toastrService.message("Bye bye", "Signed out", {
       messageType: ToastrMessageType.Warning,
       position: ToastrPosition.TopRight
     });

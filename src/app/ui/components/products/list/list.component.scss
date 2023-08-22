@@ -1,0 +1,17 @@
+.list_bigdiv{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0px;
+     background-color: rgba(199, 241, 227, 0.202);
+
+}
+.card img{
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: 0.5s all ease;
+
+}
+.card img:hover{
+    transform: scale(0.9);
+    transform: rotate(2deg);
+}

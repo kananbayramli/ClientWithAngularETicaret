@@ -38,7 +38,7 @@ export class DashboardComponent extends BaseComponent implements OnInit {
 
   m() {
 
-    this.alertify.message("Merhaba", {
+    this.alertify.message("Salam", {
       messageType: MessageType.Success,
       delay: 5,
       position: Position.TopRight

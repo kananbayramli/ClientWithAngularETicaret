@@ -1,6 +1,6 @@
-<div class="row">
-  <div class="col-md-3"></div>
-  <div class="col-md-6">
+<div class="register_bigdiv col-md-12">
+  <!-- <div class="col-md-3"></div> -->
+  <div class="col-md-10">
     <form [formGroup]="frm" (ngSubmit)="onSubmit(frm.value)">
       <div class="form-group">
         <label for="nameSurname">Name & Surname</label>
@@ -26,12 +26,12 @@
       <div class="form-group">
         <label for="passwordConfirm">Confirm Password</label>
         <input type="password" formControlName="passwordConfirm" class="form-control" id="passwordConfirm" placeholder="Confirm Password" [ngClass]="{'is-invalid': submitted && component.passwordConfirm.errors}">
-        <small *ngIf="submitted && frm.hasError('notSame')">Please enter confirmn password dogru duzgun</small>
+        <small *ngIf="submitted && frm.hasError('notSame')">Please enter confirmn password</small>
       </div>
       <br />
       <button type="submit" class="btn btn-primary">Sign up</button>
     </form>
 
   </div>
-  <div class="col-md-3"></div>
+  <!-- <div class="col-md-3"></div> -->
 </div>

@@ -29,7 +29,7 @@ export class CreateComponent extends BaseComponent implements OnInit {
 
     this.roleService.create(name.value, () => {
       this.hideSpinner(SpinnerType.BallAtom);
-      this.alertify.message("Role başarıyla eklenmiştir.", {
+      this.alertify.message("Role added successfuly", {
         dismissOthers: true,
         messageType: MessageType.Success,
         position: Position.TopRight
