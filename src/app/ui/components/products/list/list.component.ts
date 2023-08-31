@@ -50,7 +50,7 @@ export class ListComponent extends BaseComponent implements OnInit {
         const listProduct: List_Product = {
           id: p.id,
           createdDate: p.createdDate,
-          imagePath: p.productImageFiles.length ? p.productImageFiles.find(p => p.showcase).path : "",
+          imagePath: p.productImageFiles.length ? p.productImageFiles.find(p => !p.showcase).path : "",
           name: p.name,
           price: p.price,
           stock: p.stock,

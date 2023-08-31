@@ -9,7 +9,7 @@
     <mat-card-header>
       <input type="radio" name="img" (click)="showCase(image.id)"  />
     </mat-card-header>
-    <img mat-card-image [src]="image.path">
+    <img mat-card-image [src]="image.path.substring(1)">
     <mat-card-content>
 
     </mat-card-content>
