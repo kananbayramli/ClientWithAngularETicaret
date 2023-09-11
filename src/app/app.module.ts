@@ -57,7 +57,7 @@ import { DynamicLoadComponentDirective } from './directives/common/dynamic-load-
           },
           {
             id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider("546631843676576")
+            provider: new FacebookLoginProvider("691019816378838")
           }
         ],
         onError: err => console.log(err)

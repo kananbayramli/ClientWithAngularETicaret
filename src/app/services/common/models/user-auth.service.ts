@@ -86,7 +86,7 @@ export class UserAuthService {
       localStorage.setItem("accessToken", tokenResponse.token.accessToken);
       localStorage.setItem("refreshToken", tokenResponse.token.refreshToken);
 
-      this.toastrService.message("You log in with Google successfuly", "Succesfuly", {
+      this.toastrService.message("You log in with Facebook successfuly", "Succesfuly", {
         messageType: ToastrMessageType.Success,
         position: ToastrPosition.TopRight
       })
