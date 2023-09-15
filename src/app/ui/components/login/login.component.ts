@@ -27,12 +27,14 @@ export class LoginComponent extends BaseComponent implements OnInit {
           await userAuthService.googleLogin(user, () => {
             this.authService.identityCheck();
             this.hideSpinner(SpinnerType.BallAtom);
+            this.router.navigate([""]);
           })
           break;
         case "FACEBOOK":
           await userAuthService.facebookLogin(user, () => {
             this.authService.identityCheck();
             this.hideSpinner(SpinnerType.BallAtom);
+            this.router.navigate([""]);
           })
           break;
       }
@@ -46,12 +48,7 @@ export class LoginComponent extends BaseComponent implements OnInit {
     this.showSpinner(SpinnerType.BallAtom);
     await this.userAuthService.login(usernameOrEmail, password, () => {
       this.authService.identityCheck();
-
-      this.activatedRoute.queryParams.subscribe(params => {
-        const returnUrl: string = params["returnUrl"];
-        if (returnUrl)
-          this.router.navigate([returnUrl]);
-      });
+      this.router.navigate([""]);
       this.hideSpinner(SpinnerType.BallAtom);
     });
   }
